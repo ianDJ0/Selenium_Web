@@ -1,0 +1,6 @@
+pytest -v -s test_PytestDemo1.py
+python -v -s test_PytestDemo.py
+allure serve "C:\Users\Potato\PycharmProjects\pythonProject\venv\AllureDemo\ReportsFolder"
+pytest -v --alluredir="./ReportsFolder/" test_AllureDemo.py
+pytest -v --html=.\ReportsFolder\report.html test_AllureDemo.py
+pytest -v -s --html=.\reports\report.html --self-contained-html test_PytestDemo1.py
