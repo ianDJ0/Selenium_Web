@@ -1,12 +1,11 @@
 import time
 import logging
-
+import os
 import pytest
 from selenium import webdriver
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 
 
 class TestLogin():
@@ -36,6 +35,10 @@ class TestLogin():
                                  '/html/body/div[6]/div/div/div/div/div[2]/div[1]/div/form/div[3]/button').click()
         time.sleep(2)
         assert self.driver.title == 'Dashboard / nopCommerce administration'
+        path = os.path.join('C:/Users/Potato/Desktop/New folder/',f'{self.driver.title.replace("/","")}')
+        os.mkdir(path)
+        print()
+        self.driver.save_screenshot(f'{path}/amazon.png')
         self.driver.find_element(By.XPATH, '//*[@id="navbarText"]/ul/li[3]/a').click()
         time.sleep(2)
 
