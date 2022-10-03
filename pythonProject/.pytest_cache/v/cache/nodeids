@@ -1,0 +1,5 @@
+[
+  "venv/Pytest_Package/test_PytestDemo1.py::TestLogin::test_Login",
+  "venv/Pytest_Package/test_PytestDemo1.py::TestLogin::test_Title",
+  "venv/Pytest_Package/test_UrlExplore.py::test_Method1"
+]
